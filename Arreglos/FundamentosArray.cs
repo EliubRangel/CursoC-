@@ -13,5 +13,14 @@ namespace Arreglos
             }
             return arr;
         }
+        public static int SumarArray(int[] arr)
+        {
+            int suma=0;
+            for (int i=0; i< arr.Length; i++ )
+            {
+                suma=suma+ arr[i];
+            }
+            return suma;
+        }
     }
 }

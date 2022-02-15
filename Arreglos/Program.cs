@@ -11,16 +11,23 @@ namespace Arreglos
             // para limpiar consola clear
             Console.WriteLine("Binvenido a FundamentosArray");
             int Opcion;
-            int[] arr;
+            int[] arr= new int [5];
             do
             {
                 Console.WriteLine("Que deseas hacer");
                 Console.WriteLine("Opcion 0 salir");
                 Console.WriteLine("Opcion 1 Llenar array");
+                Console.WriteLine("Opcion 2 sumar con array");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
                     arr = FundamentosArray.LlenarArray(5);
+                }
+                else if (Opcion==2)
+                {
+                    int suma;
+                     suma= FundamentosArray.SumarArray(arr);
+                     Console.WriteLine("La suma de los valores del array es:"+ suma);
                 }
             
             }
