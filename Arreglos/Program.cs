@@ -18,6 +18,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 0 salir");
                 Console.WriteLine("Opcion 1 Llenar array");
                 Console.WriteLine("Opcion 2 sumar con array");
+                Console.WriteLine("Opcion 3 Promedio con array");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -28,6 +29,11 @@ namespace Arreglos
                     int suma;
                      suma= FundamentosArray.SumarArray(arr);
                      Console.WriteLine("La suma de los valores del array es:"+ suma);
+                }
+                else if (Opcion==3)
+                {   
+                    double promedio= FundamentosArray.PromedioArray(arr);
+                    Console.WriteLine("El promedio del array es:"+promedio);
                 }
             
             }

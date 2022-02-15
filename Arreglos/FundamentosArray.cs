@@ -22,5 +22,16 @@ namespace Arreglos
             }
             return suma;
         }
+        public static double PromedioArray(int[]arr)
+        {
+            double promedio=0;
+            int suma2=0;
+            for (int i=0; i<arr.Length; i++)
+            {
+                suma2=suma2+ arr[i];
+            }
+             promedio=suma2/arr.Length;
+            return promedio;
+        }
     }
 }
