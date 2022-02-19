@@ -19,6 +19,8 @@ namespace Arreglos
                 Console.WriteLine("Opcion 1 Llenar array");
                 Console.WriteLine("Opcion 2 sumar con array");
                 Console.WriteLine("Opcion 3 Promedio con array");
+                Console.WriteLine("Opcion 4 Array inverso");
+                Console.WriteLine("Opcion 5 Imprimir array inverso");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -35,6 +37,16 @@ namespace Arreglos
                     double promedio= FundamentosArray.PromedioArray(arr);
                     Console.WriteLine("El promedio del array es:"+promedio);
                 }
+                else if(Opcion==4)
+                {
+                    FundamentosArray.ArrayInverso(arr);
+                }
+                else if (Opcion==5)
+                {
+                    arr= FundamentosArray.ReturnArrayInverso(arr);
+                    FundamentosArray.ImprimirArray(arr);
+                }
+
             
             }
             while(Opcion !=0);

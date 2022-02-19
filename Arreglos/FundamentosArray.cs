@@ -33,5 +33,34 @@ namespace Arreglos
              promedio=suma2/arr.Length;
             return promedio;
         }
+        public static void ArrayInverso(int[] arr)
+        {
+            for(int i=arr.Length-1; i>=0;i--)
+            {
+                Console.Write(arr[i]+" ");
+                
+            }
+            Console.WriteLine();
+        }
+        public static int[] ReturnArrayInverso(int[] arr)
+        {
+            int[] inverse= new int[arr.Length];
+            for(int i=arr.Length-1, j=0; i>=0; i--, j++)
+            {
+              inverse[j]=arr[i];  
+            }
+            return inverse;
+            
+        }
+        public static void ImprimirArray(int[] arr)
+        {
+            for(int i=0; i<arr.Length; i++)
+            {
+                Console.Write(arr[i]+" ");
+
+            }
+            Console.WriteLine();
+
+        }
     }
 }
