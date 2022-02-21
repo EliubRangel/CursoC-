@@ -57,10 +57,17 @@ namespace Arreglos
             for(int i=0; i<arr.Length; i++)
             {
                 Console.Write(arr[i]+" ");
-
             }
             Console.WriteLine();
-
+        }
+        public static int[] ArrayDoble(int[] arr1,int[] arr2)
+        {
+           int sumaArrays=0;
+           for(int i=0, j=0; i<=arr1.Length-1; i++, j++)
+           {
+            sumaArrays=sumaArrays+arr1[i]+arr2[j];
+           } 
+           return sumaArrays;
         }
     }
 }

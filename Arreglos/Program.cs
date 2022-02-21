@@ -47,6 +47,11 @@ namespace Arreglos
                     FundamentosArray.ImprimirArray(arr);
                 }
 
+                else if(Opcion==6)
+                {
+                 FundamentosArray.ArrayDoble;
+                }
+
             
             }
             while(Opcion !=0);
