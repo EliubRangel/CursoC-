@@ -21,6 +21,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 3 Promedio con array");
                 Console.WriteLine("Opcion 4 Array inverso");
                 Console.WriteLine("Opcion 5 Imprimir array inverso");
+                Console.WriteLine("Opcion 6 Array doble");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -49,7 +50,10 @@ namespace Arreglos
 
                 else if(Opcion==6)
                 {
-                 FundamentosArray.ArrayDoble;
+                    int[]arr2= new int[arr.Length];
+                    arr2=FundamentosArray.LlenarArray(arr.Length);
+                 arr=FundamentosArray.ArrayDoble(arr,arr2);
+                 FundamentosArray.ImprimirArray(arr);
                 }
 
             

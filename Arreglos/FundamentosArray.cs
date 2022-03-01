@@ -62,10 +62,10 @@ namespace Arreglos
         }
         public static int[] ArrayDoble(int[] arr1,int[] arr2)
         {
-           int sumaArrays=0;
-           for(int i=0, j=0; i<=arr1.Length-1; i++, j++)
+           int[] sumaArrays=new int[arr1.Length];
+           for(int i=0; i<arr1.Length; i++)
            {
-            sumaArrays=sumaArrays+arr1[i]+arr2[j];
+            sumaArrays[i]=arr1[i]+arr2[i];
            } 
            return sumaArrays;
         }
