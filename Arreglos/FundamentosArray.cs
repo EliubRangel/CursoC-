@@ -5,12 +5,16 @@ namespace Arreglos
     {
         public static int[] LlenarArray (int Size)
         {
+            Console.WriteLine("****Llenar Array****");
+            Console.WriteLine("Teclea "+Size+" numeros separados por un espacio" );
             int [ ] arr= new int [Size];
             // se puso size-1, por que la cajonera se recorre por que empieza en 0.
-            for (int i=0;i<=Size-1;i++)
+            string[] sArr = Console.ReadLine().Split(" ");
+            for(int i=0; i<arr.Length; i++)
             {
-                arr[i]=int.Parse (Console.ReadLine());
+                arr[i]=int.Parse(sArr[i]);
             }
+            Console.WriteLine("------------------------");
             return arr;
         }
         public static int SumarArray(int[] arr)
@@ -59,6 +63,7 @@ namespace Arreglos
                 Console.Write(arr[i]+" ");
             }
             Console.WriteLine();
+            Console.WriteLine("------------------------");
         }
         public static int[] ArrayDoble(int[] arr1,int[] arr2)
         {
@@ -68,6 +73,29 @@ namespace Arreglos
             sumaArrays[i]=arr1[i]+arr2[i];
            } 
            return sumaArrays;
+        }
+        public static int[] Arraytriple(int[]arr1,int[]arr2,int[]arr3)
+        {
+            Console.WriteLine("****Array triple*****");
+            int[] triple= new int[arr1.Length];
+            int mayor= 0;
+            for(int i=0; i<arr1.Length;i++)
+            {
+                if (arr1[i]>arr2[i])
+                {
+                    mayor=arr1[i];
+                }
+                else 
+                {
+                    mayor= arr2[i];
+                }
+                if(arr3[i]>mayor)
+                {
+                    mayor=arr3[i];
+                }
+                triple[i]=mayor;
+            }
+            return triple;
         }
     }
 }
