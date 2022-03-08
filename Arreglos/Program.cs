@@ -23,6 +23,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 5 Imprimir array inverso");
                 Console.WriteLine("Opcion 6 Array doble");
                 Console.WriteLine("Opcion 7 mayor de 3 arrays");
+                Console.WriteLine("Opcion 8 Multiplicacion de arrays");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -65,6 +66,12 @@ namespace Arreglos
                     Console.WriteLine("Estos son los mayores de cada array");
                     FundamentosArray.ImprimirArray(AMayor);
 
+                }
+                else if (Opcion==8)
+                {
+                    int[] arr1=FundamentosArray.LlenarArray(4);
+                    int[] arr2= FundamentosArray.LlenarArray(4);
+                    FundamentosArray.TablasMultiplicar(arr1,arr2);
                 }
 
             
