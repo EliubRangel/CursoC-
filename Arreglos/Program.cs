@@ -24,6 +24,8 @@ namespace Arreglos
                 Console.WriteLine("Opcion 6 Array doble");
                 Console.WriteLine("Opcion 7 mayor de 3 arrays");
                 Console.WriteLine("Opcion 8 Multiplicacion de arrays");
+                Console.WriteLine("Opcion 9 Buscar valor en array");
+                Console.WriteLine("Opcion 10 texto mayor de 10");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -73,6 +75,32 @@ namespace Arreglos
                     int[] arr2= FundamentosArray.LlenarArray(4);
                     FundamentosArray.TablasMultiplicar(arr1,arr2);
                 }
+                else if (Opcion==9)
+                {
+                    int[]arr2=FundamentosArray.LlenarArray(4);
+                    Console.WriteLine("Que numero desea buscar?");
+                    int n= int.Parse(Console.ReadLine());
+                    int buscar= FundamentosArray.EncontrarNumero(arr2, n);
+                    if(buscar==-1)
+                    {
+                        Console.WriteLine("el numero se encuentra en la posicion:" );
+                    }
+                    
+                }
+                else if (Opcion==10)
+                {
+                    string[] textos= new string [5];
+                    textos[0]= "hola";
+                    textos[1]="me llamo samuel";
+                    textos[2]="arreglo";
+                    textos[3]="hoy es lunes";
+                    textos[4]="me llamo eliub";
+                    string[] textoFiltrado=  FundamentosArray.FiltrarTextoMayor10(textos);
+                    FundamentosArray.ImprimirArrayTexto(textoFiltrado);
+                    
+
+                }
+                
 
             
             }

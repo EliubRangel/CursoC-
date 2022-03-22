@@ -65,6 +65,15 @@ namespace Arreglos
             Console.WriteLine();
             Console.WriteLine("------------------------");
         }
+        public static void ImprimirArrayTexto(string[] arr)
+        {
+            for(int i=0; i<arr.Length; i++)
+            {
+                Console.Write(arr[i]+" || ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("------------------------");
+        }
         public static int[] ArrayDoble(int[] arr1,int[] arr2)
         {
            int[] sumaArrays=new int[arr1.Length];
@@ -97,7 +106,7 @@ namespace Arreglos
             }
             return triple;
         }
-        public static async void TablasMultiplicar(int[]arr1,int[]arr2)
+        public static void TablasMultiplicar(int[]arr1,int[]arr2)
         {
             int Multiplicar=0;
             for(int i=0; i<arr1.Length; i++)
@@ -112,5 +121,43 @@ namespace Arreglos
             }
              
         }
+
+        /// arr significa la lista de numeros donde se realizara la busqueda.
+        /// numero significa el valor que se desea buscar en el arreglo.
+        ///regresa el valor enetro del cajon donde se encuentra el numero que se busco y se no esta regresara un -1
+        public static int EncontrarNumero(int[]arr, int numero)
+        {
+            int pocision=-1;
+            for(int i=0; i<arr.Length; i++)
+            {
+               if(numero == arr[i])
+               {
+                   pocision= i;
+
+               }
+               
+            }
+            return pocision;
+        }
+        public static string[] FiltrarTextoMayor10(string[] arr)
+        {
+            string[] arr1= new string[arr.Length];
+            
+             for(int i =0 ; i < arr.Length; i++)
+            {
+                //"abcde".Length = 5 caracteres
+                
+                if(arr[i].Length>10)
+                {
+                  arr1[i]=arr[i];
+
+                }
+                
+            }
+            return arr1;
+            
+            
+        }
+
     }
 }
