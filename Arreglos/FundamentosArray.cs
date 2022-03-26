@@ -159,6 +159,24 @@ namespace Arreglos
             return arr1;
                
         }
+        public static string[] ConfirmarVocal(string[]arr)
+        {
+            int cnt=0;
+            string [] arr1= new string[arr.Length];
+            for(int i=0; i<arr.Length; i++)
+            {
+                if(arr[i].StartsWith("a")||arr[i].StartsWith("e")||arr[i].StartsWith("i")||arr[i].StartsWith("o")||arr[i].StartsWith("u"))
+                {
+                    arr1[cnt]=arr[i];
+                    cnt++;
+                }
+                
+             }
+             return arr1;
+
+            
+        }
+        
 
     }
 }

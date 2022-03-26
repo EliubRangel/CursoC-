@@ -26,6 +26,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 8 Multiplicacion de arrays");
                 Console.WriteLine("Opcion 9 Buscar valor en array");
                 Console.WriteLine("Opcion 10 texto mayor de 10");
+                Console.WriteLine("Opcion 11 Confirmacion de inicial con vocal");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -104,7 +105,17 @@ namespace Arreglos
                     
 
                 }
-                
+                else if (Opcion==11)
+                {
+                    string[] vocales= new string[5];
+                    vocales[0]="eliub";
+                    vocales[1]="hola";
+                    vocales[2]="iniciar";
+                    vocales[3]="samuel";
+                    vocales[4]="boyito";
+                    string[] FiltrarVocales= FundamentosArray.ConfirmarVocal(vocales);
+                    FundamentosArray.ImprimirArrayTexto(FiltrarVocales);
+                }
 
             
             }
