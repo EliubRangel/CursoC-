@@ -69,7 +69,7 @@ namespace Arreglos
         {
             for(int i=0; i<arr.Length; i++)
             {
-                Console.Write(arr[i]+" || ");
+                Console.Write(arr[i]+" | ");
             }
             Console.WriteLine();
             Console.WriteLine("------------------------");
@@ -142,6 +142,7 @@ namespace Arreglos
         public static string[] FiltrarTextoMayor10(string[] arr)
         {
             string[] arr1= new string[arr.Length];
+            int cnt= 0;
             
              for(int i =0 ; i < arr.Length; i++)
             {
@@ -149,14 +150,14 @@ namespace Arreglos
                 
                 if(arr[i].Length>10)
                 {
-                  arr1[i]=arr[i];
+                  arr1[cnt]=arr[i];
+                  cnt++;
 
                 }
-                
+     
             }
             return arr1;
-            
-            
+               
         }
 
     }

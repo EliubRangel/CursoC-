@@ -83,7 +83,11 @@ namespace Arreglos
                     int buscar= FundamentosArray.EncontrarNumero(arr2, n);
                     if(buscar==-1)
                     {
-                        Console.WriteLine("el numero se encuentra en la posicion:" );
+                        Console.WriteLine("el numero se encuentra en la posicion:"+ n );
+                    }
+                    else
+                    {
+                        Console.WriteLine("No se emcuemtra el numero en el arreglo.");
                     }
                     
                 }
