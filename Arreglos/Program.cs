@@ -27,6 +27,8 @@ namespace Arreglos
                 Console.WriteLine("Opcion 9 Buscar valor en array");
                 Console.WriteLine("Opcion 10 texto mayor de 10");
                 Console.WriteLine("Opcion 11 Confirmacion de inicial con vocal");
+                Console.WriteLine("Opcion 12 filtrado por iniciales");
+                Console.WriteLine("Opcion 13 Multiplos del 3 y 5");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -115,6 +117,29 @@ namespace Arreglos
                     vocales[4]="boyito";
                     string[] FiltrarVocales= FundamentosArray.ConfirmarVocal(vocales);
                     FundamentosArray.ImprimirArrayTexto(FiltrarVocales);
+                }
+                else if (Opcion==12)
+                {
+                    string[] nombres= new string[5];
+                    nombres[0]="eliub";
+                    nombres[1]="samuel";
+                    nombres[2]="alejandra";
+                    nombres[3]="alexa";
+                    nombres[4]="omar";
+                    string[] filtrarletras= FundamentosArray.FiltrarLetras(nombres);
+                    FundamentosArray.ImprimirArrayTexto(filtrarletras);
+                }
+                else if(Opcion==13)
+                {
+                    int[] numeros= new int[5];
+                    numeros[0]= 12;
+                    numeros[1]=7;
+                    numeros[2]=15;
+                    numeros[3]=25;
+                    numeros[4]=8;
+                    string [] multiplos=FundamentosArray.Multiplos(numeros);
+                    FundamentosArray.ImprimirArrayTexto(multiplos);
+                    
                 }
 
             

@@ -176,6 +176,49 @@ namespace Arreglos
 
             
         }
+        public static string[] FiltrarLetras(string[]arr)
+        {
+            int cnt=0;
+            string nombre= "eliub";
+            string[] arr1=new string[arr.Length];
+            for(int i=0; i<arr.Length; i++)
+            {
+                string text = arr[i];
+                if(text[0]== text[text.Length-1] )
+                {
+                    arr1[cnt]=arr[i];
+                    cnt++;
+                
+                }
+
+             }
+             return arr1;
+
+        }
+        public static string[] Multiplos(int[]arr)
+        {
+            string[] FizzBuzz= new string [arr.Length];
+
+            for(int i=0; i<arr.Length; i++)
+            {
+                if(arr[i]%3==0)
+                {
+                    FizzBuzz[i]="fizz";
+
+                }
+                else if(arr[i]%5==0)
+                {
+                    FizzBuzz[i]="Buzz";
+                }
+                 if (arr[i]%3==0 && arr[i]%5==0)
+                {
+                    FizzBuzz[i]="FizzBuzz";
+
+                }
+
+            }
+            return FizzBuzz;
+        }
         
 
     }
