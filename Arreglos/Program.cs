@@ -29,6 +29,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 11 Confirmacion de inicial con vocal");
                 Console.WriteLine("Opcion 12 filtrado por iniciales");
                 Console.WriteLine("Opcion 13 Multiplos del 3 y 5");
+                Console.WriteLine("Opcion 14 Suma del peso");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -141,6 +142,18 @@ namespace Arreglos
                     FundamentosArray.ImprimirArrayTexto(multiplos);
                     
                 }
+                else if(Opcion==14)
+                {
+                    int[] numeros= new int[3];
+                    numeros[0]= 3;
+                    numeros[1]=6;
+                    numeros[2]=9;
+                    // numeros[3]=25;
+                    // numeros[4]=8;
+                    int PesoArray=FundamentosArray.PesoArray(numeros);
+                    Console.WriteLine("La suma del peso del array es:"+PesoArray );
+                }
+
 
             
             }

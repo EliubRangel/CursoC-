@@ -203,21 +203,37 @@ namespace Arreglos
             {
                 if(arr[i]%3==0)
                 {
-                    FizzBuzz[i]="fizz";
+                    FizzBuzz[i]=FizzBuzz[i]+"fizz";
 
                 }
-                else if(arr[i]%5==0)
+                if(arr[i]%5==0)
                 {
-                    FizzBuzz[i]="Buzz";
+                    FizzBuzz[i]=FizzBuzz[i]+"Buzz";
                 }
-                 if (arr[i]%3==0 && arr[i]%5==0)
-                {
-                    FizzBuzz[i]="FizzBuzz";
-
-                }
-
+                
             }
             return FizzBuzz;
+        }
+        public static int PesoArray(int[]arr)
+        {
+            
+           
+            int suma=0;
+            for(int i=0; i<arr.Length; i++)
+            {
+            int peso=0;
+            if(arr[i]%3==0||arr[i]%6==0||arr[i]%9==0)
+            {
+                peso++;
+            }
+            if(arr[i]%2==0||arr[i]%4==0||arr[i]%7==0)
+            {
+                peso=peso+3;
+            }    
+            suma=suma+peso;
+
+            }
+            return suma;
         }
         
 
