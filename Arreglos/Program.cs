@@ -30,6 +30,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 12 filtrado por iniciales");
                 Console.WriteLine("Opcion 13 Multiplos del 3 y 5");
                 Console.WriteLine("Opcion 14 Suma del peso");
+                Console.WriteLine("Opcion 15 Gastos semanales");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -152,6 +153,20 @@ namespace Arreglos
                     // numeros[4]=8;
                     int PesoArray=FundamentosArray.PesoArray(numeros);
                     Console.WriteLine("La suma del peso del array es:"+PesoArray );
+                }
+                else if(Opcion==15)
+                {
+                    double[] Gastos= new double[7];
+                    Gastos[0]= 15;
+                    Gastos[1]=76;
+                    Gastos[2]=98;
+                    Gastos[3]=17.8;
+                    Gastos[4]=38;
+                    Gastos[5]=17;
+                    Gastos[6]= 56;
+                    string GastosSemanales=FundamentosArray.GastosSemanales(Gastos);
+                    Console.WriteLine("El dia con mayor gasto es:"+ GastosSemanales);
+
                 }
 
 
