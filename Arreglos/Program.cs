@@ -31,6 +31,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 13 Multiplos del 3 y 5");
                 Console.WriteLine("Opcion 14 Suma del peso");
                 Console.WriteLine("Opcion 15 Gastos semanales");
+                Console.WriteLine("Opcion 16 Promedio de alumnos");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -166,6 +167,19 @@ namespace Arreglos
                     Gastos[6]= 56;
                     string GastosSemanales=FundamentosArray.GastosSemanales(Gastos);
                     Console.WriteLine("El dia con mayor gasto es:"+ GastosSemanales);
+
+                }
+                else if(Opcion==16)
+                {
+                    int[] promedio= new int[6];
+                    promedio[0]=10;
+                    promedio[1]=10;
+                    promedio[2]=9;
+                    promedio[3]=5;
+                    promedio[4]=7;
+                    promedio[5]=8;
+                    int PromedioAlumnos= FundamentosArray.PromedioAlumnos(promedio);
+                    Console.WriteLine("El promedio es:"+ PromedioAlumnos);
 
                 }
 

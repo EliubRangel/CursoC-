@@ -262,6 +262,17 @@ namespace Arreglos
         
             
         }
+        public static int PromedioAlumnos(int[]arr)
+        {
+         int promedio=0;
+         int suma=0;
+         for(int i=0; i<arr.Length;i++)
+         {
+             suma=suma+arr[i];
+             promedio=suma/arr.Length;
+         }   
+         return promedio;
+        }
         
 
     }
