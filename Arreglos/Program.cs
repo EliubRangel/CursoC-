@@ -178,7 +178,7 @@ namespace Arreglos
                     promedio[3]=5;
                     promedio[4]=7;
                     promedio[5]=8;
-                    int PromedioAlumnos= FundamentosArray.PromedioAlumnos(promedio);
+                    double PromedioAlumnos= FundamentosArray.PromedioAlumnos(promedio);
                     Console.WriteLine("El promedio es:"+ PromedioAlumnos);
 
                 }
