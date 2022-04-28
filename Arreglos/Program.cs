@@ -32,6 +32,8 @@ namespace Arreglos
                 Console.WriteLine("Opcion 14 Suma del peso");
                 Console.WriteLine("Opcion 15 Gastos semanales");
                 Console.WriteLine("Opcion 16 Promedio de alumnos");
+                Console.WriteLine("Opcion 17 puntos scrabble");
+                Console.WriteLine("Opcion 18 clasificacion jugador");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -182,6 +184,36 @@ namespace Arreglos
                     Console.WriteLine("El promedio es:"+ PromedioAlumnos);
 
                 }
+                else if(Opcion==17)
+            {
+                string[] scrabble= new string [5];
+                scrabble[0]="xoloitcuintle";
+                scrabble[1]="herreria";
+                scrabble[2]="ramirez";
+                scrabble[3]="televisor";
+                scrabble[4]="bocina";
+                int PuntajeScrabble= FundamentosArray.PuntajeScrabble(scrabble);
+                Console.WriteLine("el puntaje total es: "+ PuntajeScrabble);
+                
+            }
+            else if(Opcion==18)
+            {
+                int[] goles1= new int[4];
+                goles1[0]=5;
+                goles1[1]=2;
+                goles1[2]=1;
+                goles1[3]=1;
+                
+                int[] tarjetasRojas1= new int[4];
+                tarjetasRojas1[0]=2;
+                tarjetasRojas1[1]=0;
+                tarjetasRojas1[2]=1;
+                tarjetasRojas1[3]=0;
+                
+                string NivelJugador=FundamentosArray.NivelJugador(goles1,tarjetasRojas1);
+                Console.WriteLine("La clasificacion del jugador es: "+ NivelJugador);
+            
+            }
 
 
             

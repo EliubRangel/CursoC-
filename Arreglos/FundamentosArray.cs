@@ -278,14 +278,15 @@ namespace Arreglos
         {
             int puntajeFinal = 0;
 
-            for (int i = 0; i < palabras.Length - 1; i++)
+            for (int i = 0; i < palabras.Length; i++)
             {
                 int puntosPalabra = 0;
                 int vocales = 0;
                 string palabra = palabras[i];
                 bool contieneXYZ = false;
+                bool contieneH= false;
                 // Revisar todas las letras de la palabra para ver el puntaje de la palabra
-                for (int j = 0; i < palabra.Length; j++)
+                for (int j = 0; j < palabra.Length; j++)
                 {
                     char letra = palabra[j];
                     if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u')
@@ -304,13 +305,50 @@ namespace Arreglos
                     {
                         contieneXYZ = true;
                     }
+                    else if(letra=='h')
+                    {
+                        contieneH=true;
+                    }
                 }
                 if(contieneXYZ == true){
                     puntosPalabra+=8;
                 }
+                if(contieneH==true)
+                {
+                    puntosPalabra-=2;
+                }
                 puntajeFinal = puntajeFinal + puntosPalabra;
             }
             return puntajeFinal;
+        }
+        public static string NivelJugador(int[] goles, int[] tarjetasRojas)
+        {
+            string tipoJugador;
+            bool CalificaA = true, CalificaB = true, CalificaC = true;
+            for(int i=0; i<goles.Length; i++)
+            {
+                int cntGoles = goles[i];
+                int cntTarjetas = tarjetasRojas[i];
+                if(cntGoles < cntTarjetas * 2)
+                    CalificaB = false;
+                    else if(cntTarjetas>=1 || cntGoles==0)
+                    {
+                        CalificaA=false;
+                    }
+                    else if(cntTarjetas==0 || cntGoles>=1)
+                    {
+                        CalificaC=false;
+                    }
+            }
+            if(CalificaA)
+                tipoJugador = "A";
+            else if(CalificaB)
+                tipoJugador = "B";
+            else if(CalificaC)
+                tipoJugador = "C";
+            else
+                tipoJugador = "No califica";
+            return tipoJugador;
         }
 
 
