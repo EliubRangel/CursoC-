@@ -34,6 +34,7 @@ namespace Arreglos
                 Console.WriteLine("Opcion 16 Promedio de alumnos");
                 Console.WriteLine("Opcion 17 puntos scrabble");
                 Console.WriteLine("Opcion 18 clasificacion jugador");
+                Console.WriteLine("Opcion 19 Crear e imprimir matriz");
                 Opcion= int.Parse(Console.ReadLine());
                 if (Opcion==1)
                 {
@@ -207,16 +208,30 @@ namespace Arreglos
                 int[] tarjetasRojas1= new int[4];
                 tarjetasRojas1[0]=2;
                 tarjetasRojas1[1]=0;
-                tarjetasRojas1[2]=1;
+                tarjetasRojas1[2]=1 ;
                 tarjetasRojas1[3]=0;
                 
                 string NivelJugador=FundamentosArray.NivelJugador(goles1,tarjetasRojas1);
                 Console.WriteLine("La clasificacion del jugador es: "+ NivelJugador);
             
             }
+            else if(Opcion==19)
+            {
+            
+                Matrices objMatriz=new Matrices();
 
+                int[,] m = objMatriz.InicializarMatrizNumerica(3,4);
+
+
+                objMatriz.ImprimirMatriz(m);
+                
+                m = objMatriz.MultiplicarMatriz(m);
+                Console.WriteLine("----------------");
+                objMatriz.ImprimirMatriz(m);
 
             
+            }
+
             }
             while(Opcion !=0);
 
