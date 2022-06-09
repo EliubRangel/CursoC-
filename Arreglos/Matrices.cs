@@ -44,6 +44,27 @@ namespace Arreglos
             return matriz;
              
         }
+        public int[,] ConvertirCero(int[,]matriz)
+        {
+            Random rdm= new Random();
+            for(int i=0; i<matriz.GetLength(0);i++)
+            {
+                for(int j=0; j<matriz.GetLength(1);j++)
+                {
+                 if(i==j)
+                 {
+                     matriz[i,j]=1;
+                 }
+                 else
+                 {
+                     matriz[i,j]=0;
+                 }
+                }
+                  
+            }
+             return matriz;   
+            
+        }
 
 
     }
