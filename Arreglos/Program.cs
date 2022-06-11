@@ -35,6 +35,11 @@ namespace Arreglos
                 Console.WriteLine("Opcion 17 puntos scrabble");
                 Console.WriteLine("Opcion 18 clasificacion jugador");
                 Console.WriteLine("Opcion 19 Crear e imprimir matriz");
+                Console.WriteLine("Opcion 20 Convertir diagonal principal en 0");
+                Console.WriteLine("Opcion 21 Convertir en 0 los elementos por encima de la diagonal principal");
+                Console.WriteLine("Opcion 22 Convertir 0 diagonal inferior");
+                Console.WriteLine("Opcion 23 Diagonal inversa");
+                Console.WriteLine("Opcion 24 Esquinas convertidas en 0");
                 Opcion = int.Parse(Console.ReadLine());
                 if (Opcion == 1)
                 {
@@ -237,6 +242,34 @@ namespace Arreglos
                     int[,] m = new int[3, 3];
                     objMatriz.ConvertirCero(m);
                     objMatriz.ImprimirMatriz(m);
+                }
+                else if(Opcion==21)
+                {
+                    Matrices obj=new Matrices();
+                    int[,]m=new int[5,5];
+                    obj.Convertir0(m);
+                    obj.ImprimirMatriz(m);
+                }
+                else if(Opcion==22)
+                {
+                    Matrices obj= new Matrices();
+                    int[,]m=new int[6,6];
+                    obj.InferiorDiagonal(m);
+                    obj.ImprimirMatriz(m);
+                }
+                else if(Opcion==23)
+                {
+                    Matrices obj= new Matrices();
+                    int[,]m=new int[5,5];
+                    obj.DiagonalInversa(m);
+                    obj.ImprimirMatriz(m);
+                }
+                else if(Opcion==24)
+                {
+                    Matrices onj= new Matrices();
+                    int[,]m=new int[5,5];
+                    onj.Esquinas(m);
+                    onj.ImprimirMatriz(m);
                 }
 
             }
