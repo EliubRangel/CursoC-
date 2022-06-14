@@ -40,6 +40,8 @@ namespace Arreglos
                 Console.WriteLine("Opcion 22 Convertir 0 diagonal inferior");
                 Console.WriteLine("Opcion 23 Diagonal inversa");
                 Console.WriteLine("Opcion 24 Esquinas convertidas en 0");
+                Console.WriteLine("Opcion 25 Convertir 1 los alrededores");
+                Console.WriteLine("Opcion 26 Hacer cruz de 1");
                 Opcion = int.Parse(Console.ReadLine());
                 if (Opcion == 1)
                 {
@@ -270,6 +272,20 @@ namespace Arreglos
                     int[,]m=new int[5,5];
                     onj.Esquinas(m);
                     onj.ImprimirMatriz(m);
+                }
+                else if(Opcion==25)
+                {
+                    Matrices obj= new Matrices();
+                    int[,]m=new int[7,7];
+                    obj.Alrrededores0(m);
+                    obj.ImprimirMatriz(m);
+                }
+                else if(Opcion==26)
+                {
+                    Matrices obj=new Matrices();
+                    int[,]m=new int[7,7];
+                    obj.Cruz(m);
+                    obj.ImprimirMatriz(m);
                 }
 
             }
